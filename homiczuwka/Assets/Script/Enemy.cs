@@ -23,10 +23,13 @@ public class Enemy : MonoBehaviour
         if (timeIns <= 3)
         {
             timeIns += Time.deltaTime;
+            if (timeIns >= 0.3f)
+            {
+                this.GetComponent<Rigidbody2D>().simulated = true;
+            }
         }
         else 
         {
-            this.GetComponent<Rigidbody2D>().simulated = true;
             EnemyMovement();
         }
         EnemyAttack();

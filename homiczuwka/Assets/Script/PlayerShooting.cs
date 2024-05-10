@@ -21,7 +21,7 @@ public class PlayerShooting : MonoBehaviour
             cooldownTimer = fireDelay;
 
             Bullet bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-
+            bullet.bulletShooter = this.GetComponent<Player>().playerType;
         }
     }
 }

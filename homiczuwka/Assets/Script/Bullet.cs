@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float maxSpeed = 5f;
     [SerializeField] private float deadZoneY = 6f;
 
-    float bulletShooter = 0;
+    public float bulletShooter = 0;
 
     void Update()
     {
@@ -19,6 +19,15 @@ public class Bullet : MonoBehaviour
         if (transform.position.y < -deadZoneY || transform.position.y > deadZoneY)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }

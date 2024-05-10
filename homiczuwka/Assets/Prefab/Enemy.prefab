@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8654881994786616003}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,4 +174,3 @@ MonoBehaviour:
   moveSpeed: 5
   turnSpeed: 2
   EnemyType: 0
-  rigidbody2D: {fileID: 4390983503406717296}
