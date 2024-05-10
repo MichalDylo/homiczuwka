@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "homiczuwka.sln"
+    "dotnet.defaultSolution": "homiczuwka.sln",
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
 }
