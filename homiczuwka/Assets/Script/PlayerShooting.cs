@@ -8,8 +8,8 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private float fireDelay = 0.25f;
     private float cooldownTimer = 0f;
     [SerializeField] private KeyCode fireKey = KeyCode.Space;
+    public HunterSliderUI sliderUI;
 
-    
     // Start is called before the first frame update
     void Update()
     {
@@ -21,6 +21,7 @@ public class PlayerShooting : MonoBehaviour
 
             Bullet bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             bullet.bulletShooter = this.GetComponent<Player>().playerType;
+            bullet.sliderUI = sliderUI;
         }
     }
 }

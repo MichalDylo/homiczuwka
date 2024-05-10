@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +8,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float maxSpeed = 5f;
     [SerializeField] private float deadZoneY = 6f;
 
-    public float bulletShooter = 0;
-
+    public int bulletShooter = 0;
+    public HunterSliderUI sliderUI;
     void Update()
     {
         Vector3 pos = transform.position;
@@ -26,6 +27,19 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            if (collision.gameObject.GetComponent<Enemy>().EnemyType == (int)ObjectType.EnemyType.angel)
+            {
+                sliderUI.AngelIsHunted(bulletShooter);
+            }
+            else if (collision.gameObject.GetComponent<Enemy>().EnemyType == (int)ObjectType.EnemyType.demon)
+            {
+                sliderUI.DemonIsHunted(bulletShooter);
+            }
+            else
+            {
+                Debug.LogAssertion("=======illegal output=======");
+            }
+
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }

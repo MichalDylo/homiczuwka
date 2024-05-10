@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     private bool touchTheBoundary;
     public int EnemyType = 0;
     private float timeIns = 0;
+    private float shootCD = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,22 +18,33 @@ public class Enemy : MonoBehaviour
 
     }
 
+    bool rigidbodySet = false;
+
     // Update is called once per frame
     void Update()
     {
         if (timeIns <= 3)
         {
             timeIns += Time.deltaTime;
-            if (timeIns >= 0.3f)
+            if (timeIns >= 0.3f && rigidbodySet == false)
             {
                 this.GetComponent<Rigidbody2D>().simulated = true;
+                rigidbodySet = true;
             }
         }
-        else 
+        else
         {
             EnemyMovement();
         }
-        EnemyAttack();
+        if (shootCD <= 3)
+        {
+            shootCD += Time.deltaTime;
+        }
+        else
+        {
+            EnemyAttack();
+            shootCD = 0;
+        }
     }
 
     float timeMarker = 0;

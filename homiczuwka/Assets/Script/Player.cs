@@ -7,11 +7,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 6f;
     private float speedX, speedY;
     private Rigidbody2D rb;
-    enum PlayerType
-    { 
-        demonHunter = -1,
-        angelHunter = 1
-    }
 
     public int playerType = 0;
     // Start is called before the first frame update
@@ -23,13 +18,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerType == (int)PlayerType.demonHunter)
+        if (playerType == (int)ObjectType.HunterType.demonHunter)
         {
             speedX = Input.GetAxisRaw("Horizontal") * moveSpeed;
             speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
             rb.velocity = new Vector2(speedX, 0);
         }
-        else if (playerType == (int)PlayerType.angelHunter)
+        else if (playerType == (int)ObjectType.HunterType.angelHunter)
         {
             speedX = Input.GetAxisRaw("Horizontal2") * moveSpeed;
             speedY = Input.GetAxisRaw("Vertical") * moveSpeed;
