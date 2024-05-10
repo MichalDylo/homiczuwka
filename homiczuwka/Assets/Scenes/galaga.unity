@@ -466,6 +466,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 448386656762780545, guid: 22c6ac79ea72ff44d9b3d52871c85c0a, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1857310387}
     - target: {fileID: 1132498485038170420, guid: 22c6ac79ea72ff44d9b3d52871c85c0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1092,6 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41178bf8fcc284142b924eaa252cbe86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 1857310385}
 --- !u!1001 &1958055272
 PrefabInstance:
   m_ObjectHideFlags: 0

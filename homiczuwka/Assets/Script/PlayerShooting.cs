@@ -16,7 +16,6 @@ public class PlayerShooting : MonoBehaviour
 
         if (Input.GetKey(fireKey) && cooldownTimer <= 0f)
         {
-            Debug.Log("Shoot!");
             cooldownTimer = fireDelay;
 
             Instantiate(bulletPrefab, transform.position, transform.rotation);
