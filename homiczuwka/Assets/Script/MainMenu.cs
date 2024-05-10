@@ -9,4 +9,14 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("galaga");
     }
+
+    public void OpenTutorial()
+    {
+        Debug.Log("Opened the tutorial");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
