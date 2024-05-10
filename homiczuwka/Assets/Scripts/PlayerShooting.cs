@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public GameObject bulletPrefab;
     [SerializeField] private float fireDelay = 0.25f;
     private float cooldownTimer = 0f;
+    [SerializeField] private KeyCode fireKey = KeyCode.Space;
     
     // Start is called before the first frame update
     void Update()
     {
         cooldownTimer -= Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.Space) && cooldownTimer <= 0f)
+        if (Input.GetKey(fireKey) && cooldownTimer <= 0f)
         {
             Debug.Log("Shoot!");
             cooldownTimer = fireDelay;
+
+            Instantiate(bulletPrefab, transform.position, transform.rotation);
         }
     }
 }
