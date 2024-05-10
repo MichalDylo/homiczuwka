@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
     [SerializeField] private float maxSpeed = 5f;
+    [SerializeField] private float deadZoneY = 6f;
 
     void Update()
     {
@@ -12,5 +13,10 @@ public class MoveForward : MonoBehaviour
         Vector3 velocity = new Vector3(0, maxSpeed * Time.deltaTime, 0);
         pos += transform.rotation * velocity;
         transform.position = pos;
+
+        if (transform.position.y < -deadZoneY || transform.position.y > deadZoneY)
+        {
+            Destroy(gameObject);
+        }
     }
 }
