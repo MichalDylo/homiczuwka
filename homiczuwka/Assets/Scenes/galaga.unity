@@ -194,12 +194,52 @@ Transform:
   m_GameObject: {fileID: 222803986}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.83, y: -0.39472723, z: 0.0354202}
+  m_LocalPosition: {x: 10.15, y: -0.39472723, z: 0.0354202}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &538073058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8678996090024080041, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+  m_PrefabInstance: {fileID: 1958055272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &538073064
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538073058}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &670451670
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +445,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5800921407159038306, guid: 22c6ac79ea72ff44d9b3d52871c85c0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1370071237}
   m_SourcePrefab: {fileID: 100100000, guid: 22c6ac79ea72ff44d9b3d52871c85c0a, type: 3}
 --- !u!1 &1193960260
 GameObject:
@@ -500,6 +543,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 679327248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1370071231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5800921407159038306, guid: 22c6ac79ea72ff44d9b3d52871c85c0a, type: 3}
+  m_PrefabInstance: {fileID: 1136714422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1370071237
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370071231}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1445457866
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +609,7 @@ Transform:
   m_GameObject: {fileID: 1445457866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.04, y: -0.39472723, z: 0.0354202}
+  m_LocalPosition: {x: -8.36, y: -0.39472723, z: 0.0354202}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -747,7 +830,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8678996090024080041, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 538073064}
   m_SourcePrefab: {fileID: 100100000, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
 --- !u!1 &2080398686
 GameObject:
@@ -785,7 +871,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
