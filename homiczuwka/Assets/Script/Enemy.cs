@@ -11,8 +11,6 @@ public class Enemy : MonoBehaviour
     public int EnemyType = 0;
     private float timeIns = 0;
 
-    public Rigidbody2D rigidbody2D;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +26,7 @@ public class Enemy : MonoBehaviour
         }
         else 
         {
-            rigidbody2D.simulated = true;
+            this.GetComponent<Rigidbody2D>().simulated = true;
             EnemyMovement();
         }
         EnemyAttack();

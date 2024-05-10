@@ -400,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800921407159038306, guid: 22c6ac79ea72ff44d9b3d52871c85c0a, type: 3}
       propertyPath: m_Name
-      value: Player1
+      value: Player_DemonHunter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -702,7 +702,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8678996090024080041, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
       propertyPath: m_Name
-      value: Player2
+      value: Player_AngelHunter
       objectReference: {fileID: 0}
     - target: {fileID: 9164226432300480278, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
       propertyPath: m_LocalPosition.x

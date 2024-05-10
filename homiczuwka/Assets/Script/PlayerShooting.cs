@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public GameObject bulletPrefab;
+    public Bullet bulletPrefab;
     [SerializeField] private float fireDelay = 0.25f;
     private float cooldownTimer = 0f;
     [SerializeField] private KeyCode fireKey = KeyCode.Space;
+
     
     // Start is called before the first frame update
     void Update()
@@ -19,7 +20,8 @@ public class PlayerShooting : MonoBehaviour
             Debug.Log("Shoot!");
             cooldownTimer = fireDelay;
 
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Bullet bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+
         }
     }
 }

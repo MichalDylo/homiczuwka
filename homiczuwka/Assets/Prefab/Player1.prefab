@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
+  playerType: -1
 --- !u!50 &9215378061791533536
 Rigidbody2D:
   serializedVersion: 4
@@ -139,6 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac38506742354df4b82d57ca8906fb8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1084678061234086054, guid: 9dddf0315745f334bb0d31f3af4d534c, type: 3}
+  bulletPrefab: {fileID: 4813211561787768346, guid: 9dddf0315745f334bb0d31f3af4d534c, type: 3}
   fireDelay: 0.25
   fireKey: 32
