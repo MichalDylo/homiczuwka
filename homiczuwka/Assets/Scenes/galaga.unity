@@ -1081,6 +1081,8 @@ MonoBehaviour:
   endPointOne: {fileID: 1235189628}
   endPointTwo: {fileID: 670451671}
   insCD: 4.5
+  stopInstantiate: 0
+  hunterSliderUI: {fileID: 0}
 --- !u!1 &713592539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +1762,9 @@ MonoBehaviour:
   backToStart: {fileID: 713592541}
   demonHunterWin: {fileID: 200344198}
   angelHunterWin: {fileID: 829870900}
+  enemyInstantiation: {fileID: 0}
+  demonHunter: {fileID: 0}
+  angelHunter: {fileID: 0}
 --- !u!1 &1193960260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,7 +2554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1842210715
 MonoBehaviour:
   m_ObjectHideFlags: 0
