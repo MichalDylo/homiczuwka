@@ -2726,6 +2726,22 @@ PrefabInstance:
       propertyPath: sliderUI
       value: 
       objectReference: {fileID: 1165174917}
+    - target: {fileID: 2693768197661898520, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693768197661898520, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+      propertyPath: m_FlipY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693768197661898520, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 031e706e657b8114bbc0f299f8f0aacb, type: 3}
+    - target: {fileID: 2908053346227867258, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+      propertyPath: m_Radius
+      value: 2.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2908053346227867258, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -2733,6 +2749,18 @@ PrefabInstance:
     - target: {fileID: 8678996090024080041, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
       propertyPath: m_Name
       value: Player_AngelHunter
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164226432300480278, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.185
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164226432300480278, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.185
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164226432300480278, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.185
       objectReference: {fileID: 0}
     - target: {fileID: 9164226432300480278, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2773,6 +2801,10 @@ PrefabInstance:
     - target: {fileID: 9164226432300480278, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 9164226432300480278, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
