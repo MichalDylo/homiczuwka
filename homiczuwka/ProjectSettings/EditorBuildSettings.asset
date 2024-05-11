@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/galaga.unity
     guid: 9ac8a23c36f53ef4d89341f94940930a
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: e41e40fdc3e15d54ba66cdf0c9482348
   m_configObjects: {}

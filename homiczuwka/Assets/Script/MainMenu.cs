@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     public void OpenTutorial()
     {
         Debug.Log("Opened the tutorial");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void QuitGame()
