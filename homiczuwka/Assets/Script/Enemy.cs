@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            //EnemyAttack();
+            EnemyAttack();
             shootCD = 0;
         }
 
