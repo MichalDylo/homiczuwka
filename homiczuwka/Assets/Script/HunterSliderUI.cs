@@ -58,26 +58,105 @@ public class HunterSliderUI : MonoBehaviour
         }
     }
 
-    public void AngelHunterIsHit()
+    public void HunterIsHit(int hunterType)
     {
-        angelHunterHP--;
-        if (angelHunterHP <= 0)
+        if (hunterType == (int)ObjectType.HunterType.demonHunter)
         {
-            GameIsOver((int)ObjectType.HunterType.demonHunter);
+            demonHunterHP--;
+            DecreaseHunterHPUI(demonHunterHP, (int)ObjectType.HunterType.demonHunter);
+            if (demonHunterHP <= 0)
+            {
+                GameIsOver((int)ObjectType.HunterType.angelHunter);
+            }
+        }
+        else if (hunterType == (int)ObjectType.HunterType.angelHunter)
+        {
+            angelHunterHP--;
+            DecreaseHunterHPUI(angelHunterHP, (int)ObjectType.HunterType.angelHunter);
+            if (angelHunterHP <= 0)
+            {
+                GameIsOver((int)ObjectType.HunterType.demonHunter);
+            }
+        }
+        else
+        {
+            Debug.LogAssertion("=========illegal import========");
         }
     }
 
-    public void DemonHunterIsHit()
+    public void DecreaseHunterHPUI(int remnantHP, int hunterType = 0)
     {
-        demonHunterHP--;
-        if (demonHunterHP <= 0)
+        if (hunterType == (int)ObjectType.HunterType.angelHunter)
         {
-            GameIsOver((int)ObjectType.HunterType.angelHunter);
-        }    
+            if (remnantHP == 3)
+            {
+                angelHunterHP1.SetActive(true);
+                angelHunterHP2.SetActive(true);
+                angelHunterHP3.SetActive(true);
+            }
+            else if (remnantHP == 2)
+            {
+                angelHunterHP1.SetActive(true);
+                angelHunterHP2.SetActive(true);
+                angelHunterHP3.SetActive(false);
+            }
+            else if (remnantHP == 1)
+            {
+                angelHunterHP1.SetActive(true);
+                angelHunterHP2.SetActive(false);
+                angelHunterHP3.SetActive(false);
+            }
+            else if (remnantHP == 0)
+            {
+                angelHunterHP1.SetActive(false);
+                angelHunterHP2.SetActive(false);
+                angelHunterHP3.SetActive(false);
+            }
+            else 
+            {
+                Debug.LogAssertion("=========illegal import========");
+            }
+        }
+        else if (hunterType == (int)ObjectType.HunterType.demonHunter)
+        {
+            if (remnantHP == 3)
+            {
+                demonHunterHP1.SetActive(true);
+                demonHunterHP2.SetActive(true);
+                demonHunterHP3.SetActive(true);
+            }
+            else if (remnantHP == 2)
+            {
+                demonHunterHP1.SetActive(true);
+                demonHunterHP2.SetActive(true);
+                demonHunterHP3.SetActive(false);
+            }
+            else if (remnantHP == 1)
+            {
+                demonHunterHP1.SetActive(true);
+                demonHunterHP2.SetActive(false);
+                demonHunterHP3.SetActive(false);
+            }
+            else if (remnantHP == 0)
+            {
+                demonHunterHP1.SetActive(false);
+                demonHunterHP2.SetActive(false);
+                demonHunterHP3.SetActive(false);
+            }
+            else
+            {
+                Debug.LogAssertion("=========illegal import========");
+            }
+        }
+        else
+        {
+            Debug.LogAssertion("=========illegal import========");
+        }
+
     }
 
     public void GameIsOver(int winnerType = 0)
-    { 
-        
+    {
+
     }
 }

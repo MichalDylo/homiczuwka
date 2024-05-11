@@ -31,4 +31,6 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(speedX, 0);
         }
     }
+
+
 }

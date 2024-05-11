@@ -174,3 +174,4 @@ MonoBehaviour:
   moveSpeed: 5
   turnSpeed: 2
   EnemyType: 0
+  enemyBullet: {fileID: -862888606863853329, guid: ded95474fe3f8c34490c76b878c8d02f, type: 3}
