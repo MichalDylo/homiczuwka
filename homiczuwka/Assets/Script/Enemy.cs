@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public int EnemyType = 0;
     private float timeIns = 0;
     private float shootCD = 0;
+    [SerializeField] private float deadZoneY = 7.5f;
 
     public EnemyBullet enemyBullet;
 
@@ -47,6 +48,11 @@ public class Enemy : MonoBehaviour
             EnemyAttack();
             shootCD = 0;
         }
+
+        if (transform.position.y < -deadZoneY || transform.position.y > deadZoneY)
+        {
+            Destroy(gameObject);
+        }
     }
 
     float timeMarker = 0;
@@ -75,10 +81,20 @@ public class Enemy : MonoBehaviour
             touchTheBoundary = true;
             moveSpeed *= -1;
         }
+        else if (collision.gameObject.tag == "Hunter")
+        {
+            int playerType = collision.gameObject.GetComponent<Player>().playerType;
+            if (EnemyType != playerType)
+            {
+                collision.gameObject.GetComponent<PlayerShooting>().sliderUI.HunterIsHit(playerType);
+                Destroy(gameObject);
+            }
+        }
     }
 
     void EnemyAttack()
     {
+        //return;
         EnemyBullet enemyBulletIns = Instantiate(enemyBullet, transform.position, Quaternion.identity);
         enemyBulletIns.enemyType = EnemyType;
     }

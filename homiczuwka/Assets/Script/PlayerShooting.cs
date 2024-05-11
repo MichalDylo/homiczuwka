@@ -9,7 +9,7 @@ public class PlayerShooting : MonoBehaviour
     private float cooldownTimer = 0f;
     [SerializeField] private KeyCode fireKey = KeyCode.Space;
     public HunterSliderUI sliderUI;
-
+    public int playerBulletUpgrade = 0;
     // Start is called before the first frame update
     void Update()
     {
@@ -21,6 +21,10 @@ public class PlayerShooting : MonoBehaviour
 
             Bullet bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
             bullet.bulletShooter = this.GetComponent<Player>().playerType;
+            if (playerBulletUpgrade != 0 && this.GetComponent<Player>().playerType ==playerBulletUpgrade)
+            {
+                bullet.playerBulletUpgrade = playerBulletUpgrade;
+            }
             bullet.sliderUI = sliderUI;
         }
     }
