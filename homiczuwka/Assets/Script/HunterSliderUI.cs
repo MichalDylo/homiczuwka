@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HunterSliderUI : MonoBehaviour
@@ -19,10 +20,21 @@ public class HunterSliderUI : MonoBehaviour
     public GameObject angelHunterHP2;
     public GameObject angelHunterHP3;
 
+    public GameObject EndUI;
+    public Button backToStart;
+
+    public GameObject demonHunterWin;
+    public GameObject angelHunterWin;
     private void Start()
     {
         demonHunterSlider.value = 0;
         angelHunterSlider.value = 0;
+        EndUI.SetActive(false);
+        angelHunterHP = 3;
+        demonHunterHP = 3;
+        DecreaseHunterHPUI(angelHunterHP, (int)ObjectType.HunterType.angelHunter);
+        DecreaseHunterHPUI(demonHunterHP, (int)ObjectType.HunterType.demonHunter);
+
     }
 
     public void DemonIsHunted(int hunterType = 0)
@@ -111,8 +123,14 @@ public class HunterSliderUI : MonoBehaviour
                 angelHunterHP1.SetActive(false);
                 angelHunterHP2.SetActive(false);
                 angelHunterHP3.SetActive(false);
+<<<<<<< HEAD
             }
             else 
+=======
+                GameIsOver(-1 * (int)ObjectType.HunterType.angelHunter);
+            }
+            else
+>>>>>>> 9c63b6873c041360a807b395ed245c7818e18559
             {
                 Debug.LogAssertion("=========illegal import========");
             }
@@ -142,6 +160,10 @@ public class HunterSliderUI : MonoBehaviour
                 demonHunterHP1.SetActive(false);
                 demonHunterHP2.SetActive(false);
                 demonHunterHP3.SetActive(false);
+<<<<<<< HEAD
+=======
+                GameIsOver(-1 * (int)ObjectType.HunterType.demonHunter);
+>>>>>>> 9c63b6873c041360a807b395ed245c7818e18559
             }
             else
             {
@@ -157,6 +179,30 @@ public class HunterSliderUI : MonoBehaviour
 
     public void GameIsOver(int winnerType = 0)
     {
+<<<<<<< HEAD
 
+=======
+        Time.timeScale = 0;
+        EndUI.SetActive(true);
+        if (winnerType == (int)(ObjectType.HunterType.angelHunter))
+        {
+            demonHunterWin.SetActive(false);
+            angelHunterWin.SetActive(true);
+        }
+        else if (winnerType == (int)(ObjectType.HunterType.demonHunter))
+        {
+            demonHunterWin.SetActive(true);
+            angelHunterWin.SetActive(false);
+        }
+        else 
+        {
+            Debug.LogAssertion("=========illegal import========");
+        }
+    }
+
+    public void BackToStart()
+    {
+        SceneManager.LoadScene("Main Menu");
+>>>>>>> 9c63b6873c041360a807b395ed245c7818e18559
     }
 }
