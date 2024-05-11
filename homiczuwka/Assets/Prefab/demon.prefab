@@ -130,6 +130,7 @@ MonoBehaviour:
   moveSpeed: 5
   turnSpeed: 2
   EnemyType: 0
+  deadZoneY: 7.5
   enemyBullet: {fileID: -862888606863853329, guid: ded95474fe3f8c34490c76b878c8d02f, type: 3}
 --- !u!70 &7880870391452979525
 CapsuleCollider2D:
@@ -160,7 +161,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.01, y: -0.070834726}
