@@ -6,7 +6,8 @@ using DG.Tweening;
 public class Instantiation : MonoBehaviour
 {
 
-    public Enemy enemy;
+    public Enemy demon;
+    public Enemy angel;
     public Transform instantiateAreaOne;
     public Transform instantiateAreaTwo;
     public Transform controlPointOne;
@@ -17,6 +18,7 @@ public class Instantiation : MonoBehaviour
     private float _time = 3f;
     private float _pointCount = 5f;
 
+    public float insCD = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class Instantiation : MonoBehaviour
     void Update()
     {
         timeMarker += Time.deltaTime;
-        if (timeMarker <= 3f)
+        if (timeMarker <= insCD)
         {
             timeMarker += Time.deltaTime;
         }
@@ -42,12 +44,12 @@ public class Instantiation : MonoBehaviour
 
     public void InstatiationEnemy()
     {
-        Enemy enemy_1 = Instantiate(enemy, instantiateAreaOne.position, Quaternion.identity);
-        enemy_1.EnemyType = 1;
+        Enemy enemy_1 = Instantiate(demon, instantiateAreaOne.position, Quaternion.identity);
+        enemy_1.EnemyType = (int)ObjectType.EnemyType.demon;
         DoAnim(enemy_1.gameObject, instantiateAreaOne.position, endPointOne.position, controlPointOne.position);
 
-        Enemy enemy_2 = Instantiate(enemy, instantiateAreaTwo.position, Quaternion.identity);
-        enemy_2.EnemyType = -1;
+        Enemy enemy_2 = Instantiate(angel, instantiateAreaTwo.position, Quaternion.identity);
+        enemy_2.EnemyType = (int)ObjectType.EnemyType.angel;
         DoAnim(enemy_2.gameObject, instantiateAreaTwo.position, endPointTwo.position, controlPointTwo.position);
 
     }

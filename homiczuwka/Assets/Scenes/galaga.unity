@@ -966,13 +966,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e13bc7c603e7841baf9c507ecb315f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8654881994786616003, guid: f427b1c3a0d75a945a9b061f54fc9164, type: 3}
+  demon: {fileID: 8654881994786616003, guid: f427b1c3a0d75a945a9b061f54fc9164, type: 3}
+  angel: {fileID: 8654881994786616003, guid: 5234e516a8e526249a4294633e379c22, type: 3}
   instantiateAreaOne: {fileID: 1193960261}
   instantiateAreaTwo: {fileID: 1736402024}
   controlPointOne: {fileID: 1204117436}
   controlPointTwo: {fileID: 856683964}
   endPointOne: {fileID: 1235189628}
   endPointTwo: {fileID: 670451671}
+  insCD: 4.5
 --- !u!1 &713592539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,7 +2728,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

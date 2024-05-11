@@ -27,6 +27,8 @@ public class HunterSliderUI : MonoBehaviour
     public GameObject angelHunterWin;
     private void Start()
     {
+        Time.timeScale = 1.0f;
+
         demonHunterSlider.value = 0;
         angelHunterSlider.value = 0;
         EndUI.SetActive(false);
