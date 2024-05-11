@@ -55,12 +55,12 @@ public class Enemy : MonoBehaviour
         if (touchTheBoundary == false)
         {
             timeMarker = 0;
-            transform.Translate(Vector2.right * moveSpeed * EnemyType * Time.deltaTime);
+            transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
         }
         else
         {
             timeMarker += Time.deltaTime;
-            transform.Translate(Vector2.down * turnSpeed * EnemyType * Time.deltaTime);
+            transform.Translate(Vector2.down * turnSpeed * Time.deltaTime);
             if (timeMarker >= 0.5f)
             {
                 touchTheBoundary = false;
