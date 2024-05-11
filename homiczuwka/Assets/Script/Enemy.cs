@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     private float timeIns = 0;
     private float shootCD = 0;
 
+    public EnemyBullet enemyBullet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class Enemy : MonoBehaviour
         {
             EnemyMovement();
         }
-        if (shootCD <= 3)
+        if (shootCD <= 0.8f)
         {
             shootCD += Time.deltaTime;
         }
@@ -77,6 +79,7 @@ public class Enemy : MonoBehaviour
 
     void EnemyAttack()
     {
-
+        EnemyBullet enemyBulletIns = Instantiate(enemyBullet, transform.position, Quaternion.identity);
+        enemyBulletIns.enemyType = EnemyType;
     }
 }
