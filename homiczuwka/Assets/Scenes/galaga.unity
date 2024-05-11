@@ -810,6 +810,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &526025101 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4166789808112523439, guid: 22c6ac79ea72ff44d9b3d52871c85c0a, type: 3}
+  m_PrefabInstance: {fileID: 1136714422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8318651c3c06142a2504501fac18c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &665772690 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6399811928203521895, guid: 4bc83387c831a88439d60e0877f63e52, type: 3}
+  m_PrefabInstance: {fileID: 1958055272}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8318651c3c06142a2504501fac18c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &670451670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,6 +1675,8 @@ MonoBehaviour:
   demonHunterWin: {fileID: 200344198}
   angelHunterWin: {fileID: 829870900}
   enemyInstantiation: {fileID: 679327249}
+  demonHunter: {fileID: 526025101}
+  angelHunter: {fileID: 665772690}
 --- !u!1 &1193960260
 GameObject:
   m_ObjectHideFlags: 0

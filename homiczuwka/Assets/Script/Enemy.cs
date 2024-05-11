@@ -94,6 +94,7 @@ public class Enemy : MonoBehaviour
 
     void EnemyAttack()
     {
+        //return;
         EnemyBullet enemyBulletIns = Instantiate(enemyBullet, transform.position, Quaternion.identity);
         enemyBulletIns.enemyType = EnemyType;
     }

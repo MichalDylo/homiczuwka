@@ -28,6 +28,9 @@ public class HunterSliderUI : MonoBehaviour
 
     public Instantiation enemyInstantiation;
 
+    public Player demonHunter;
+    public Player angelHunter;
+
     private void Start()
     {
         Time.timeScale = 1.0f;
@@ -57,10 +60,11 @@ public class HunterSliderUI : MonoBehaviour
         {
             angelHunterSlider.value = 0;
         }
-        else if (angelHunterSlider.value >= 1)
+        else if (angelHunterSlider.value >= 1f)
         {
             angelHunterSlider.value = 1;
             enemyInstantiation.stopInstantiate = true;
+            angelHunter.gameObject.GetComponent<PlayerShooting>().playerBulletUpgrade = (int)ObjectType.HunterType.angelHunter;
         }
     }
 
@@ -79,10 +83,11 @@ public class HunterSliderUI : MonoBehaviour
         {
             demonHunterSlider.value = 0;
         }
-        else if (demonHunterSlider.value >= 1)
+        else if (demonHunterSlider.value >= 1f)
         {
             demonHunterSlider.value = 1;
             enemyInstantiation.stopInstantiate = true;
+            demonHunter.gameObject.GetComponent<PlayerShooting>().playerBulletUpgrade = (int)ObjectType.HunterType.demonHunter;
         }
     }
 
@@ -199,7 +204,7 @@ public class HunterSliderUI : MonoBehaviour
             demonHunterWin.SetActive(true);
             angelHunterWin.SetActive(false);
         }
-        else 
+        else
         {
             Debug.LogAssertion("=========illegal import========");
         }
