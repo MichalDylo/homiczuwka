@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            EnemyAttack();
+            //EnemyAttack();
             shootCD = 0;
         }
 
@@ -56,27 +56,44 @@ public class Enemy : MonoBehaviour
     }
 
     float timeMarker = 0;
+    bool changeDirection = false;
+    Vector2 randomVal;
     void EnemyMovement()
     {
-        if (touchTheBoundary == false)
+        if (this.transform.position.y * EnemyType < 2f)
         {
-            timeMarker = 0;
-            transform.Translate(Vector2.right * moveSpeed * EnemyType * Time.deltaTime);
+            if (Random.Range(0, 1000) < 5 && changeDirection == false)
+            {
+                changeDirection = true;
+                randomVal = new Vector2(Random.Range(0.2f, 3.0f), 1f);
+            }
+            if (changeDirection == true)
+            {
+                transform.Translate(randomVal * moveSpeed * EnemyType * Time.deltaTime);
+            }
         }
         else
         {
-            timeMarker += Time.deltaTime;
-            transform.Translate(Vector2.down * turnSpeed * EnemyType * Time.deltaTime);
-            if (timeMarker >= 0.5f)
+            if (touchTheBoundary == false)
             {
-                touchTheBoundary = false;
+                timeMarker = 0;
+                transform.Translate(Vector2.right * moveSpeed * EnemyType * Time.deltaTime);
+            }
+            else
+            {
+                timeMarker += Time.deltaTime;
+                transform.Translate(Vector2.down * turnSpeed * EnemyType * Time.deltaTime);
+                if (timeMarker >= 0.5f)
+                {
+                    touchTheBoundary = false;
+                }
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Boundary")
+        if (collision.gameObject.tag == "Boundary" && changeDirection == false)
         {
             touchTheBoundary = true;
             moveSpeed *= -1;
