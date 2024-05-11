@@ -19,6 +19,11 @@ public class Instantiation : MonoBehaviour
     private float _pointCount = 5f;
 
     public float insCD = 3f;
+
+    public bool stopInstantiate = false;
+
+    public HunterSliderUI hunterSliderUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +31,24 @@ public class Instantiation : MonoBehaviour
     }
 
     float timeMarker = 0;
-
+    float stopTimerMarker = 0;
     // Update is called once per frame
     void Update()
     {
+        if (stopInstantiate == true)
+        {
+            stopTimerMarker += Time.deltaTime;
+
+            if (stopTimerMarker >= 7.0f)
+            {
+                stopTimerMarker = 0;
+                stopInstantiate = false;
+                hunterSliderUI.angelHunterSlider.value = 0;
+                hunterSliderUI.demonHunterSlider.value = 0;
+            }
+            return;
+        }
+
         timeMarker += Time.deltaTime;
         if (timeMarker <= insCD)
         {

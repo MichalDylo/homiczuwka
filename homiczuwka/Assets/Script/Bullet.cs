@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour
 
     public int bulletShooter = 0;
     public HunterSliderUI sliderUI;
+    public int playerBulletUpgrade = 0;
+
     void Update()
     {
         Vector3 pos = transform.position;
@@ -42,6 +44,11 @@ public class Bullet : MonoBehaviour
 
             Destroy(gameObject);
             Destroy(collision.gameObject);
+        }
+
+        else if (collision.gameObject.tag == "Hunter" && collision.gameObject.GetComponent<Player>().playerType == (-1) * playerBulletUpgrade)
+        {
+            collision.gameObject.GetComponent<PlayerShooting>().sliderUI.HunterIsHit(-1 * playerBulletUpgrade);
         }
     }
 }
