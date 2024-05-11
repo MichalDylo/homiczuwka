@@ -12,8 +12,12 @@ public class MainMenu : MonoBehaviour
 
     public void OpenTutorial()
     {
-        Debug.Log("Opened the tutorial");
         SceneManager.LoadScene("Tutorial");
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 
     public void QuitGame()
