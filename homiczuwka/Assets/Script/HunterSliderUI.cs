@@ -49,7 +49,7 @@ public class HunterSliderUI : MonoBehaviour
     {
         if (hunterType == (int)ObjectType.HunterType.angelHunter)
         {
-            angelHunterSlider.value -= 0.1f;
+            angelHunterSlider.value -= 0.05f;
         }
         else
         {
@@ -76,7 +76,7 @@ public class HunterSliderUI : MonoBehaviour
         }
         else
         {
-            demonHunterSlider.value -= 0.1f;
+            demonHunterSlider.value -= 0.05f;
         }
 
         if (demonHunterSlider.value < 0)
